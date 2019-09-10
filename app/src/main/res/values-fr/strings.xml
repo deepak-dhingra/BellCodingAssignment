@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TweetsViewerApp</string>
+
+    <string name="increase_radius">Tweet rayon 5&#8211;700 Km</string>
+
+
+    <string name="allow_gps_permission">Autoriser les autorisations GPS</string>
+    <string name="ok">D\'accord</string>
+    <string name="cancel">Annuler</string>
+    <string name="all_tweets">Tous les tweets</string>
+    <string name="tweets_on_maps">Tweets sur des cartes</string>
+    <string name="search">Chercher</string>
+</resources>

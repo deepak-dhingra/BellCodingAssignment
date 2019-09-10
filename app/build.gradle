@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+apply plugin: 'androidx.navigation.safeargs'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.challenge.tweetsviewerapp"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    dataBinding {
+        enabled true
+    }
+    buildTypes {
+        debug{
+            buildConfigField "String","BASE_URL",'"https://api.twitter.com/1.1"'
+            buildConfigField "String","TwitterApiKey",'"IwC7s3MwHfSeH56EbQbiiO9LK"'
+            buildConfigField "String","TwitterAppSecret",'"0HDLD2edQv5I07PT0IUSKCPMNfq1kvWCq4gtGvKE3Giz7rHnwY"'
+        }
+        release {
+
+            buildConfigField "String","BASE_URL",'"https://api.twitter.com/1.1"'
+            buildConfigField "String","TwitterApiKey",'"IwC7s3MwHfSeH56EbQbiiO9LK"'
+            buildConfigField "String","TwitterAppSecret",'"0HDLD2edQv5I07PT0IUSKCPMNfq1kvWCq4gtGvKE3Giz7rHnwY"'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta04'
+    implementation "com.twitter.sdk.android:twitter:3.1.1"
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:2.19.0'
+    testImplementation 'android.arch.core:core-testing:1.1.1'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'org.mockito:mockito-android:2.19.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation ('androidx.test.espresso:espresso-contrib:3.2.0'){
+        exclude group:'androidx.appcompat',module:'appcompat'
+        exclude group:'androidx.appcompat',module:'design'
+        exclude module:'support-annotations'
+        exclude module:'recyclerview'
+    }
+
+}

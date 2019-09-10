@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="splash_tv_desc">25sp</dimen>
+    <dimen name="seek_desc_main">20sp</dimen>
+    <dimen name="tv_seek_progress_main">12sp</dimen>
+    <dimen name="seek_progress_tv_padding">5dp</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TweetsViewerApp</string>
+
+    <string name="increase_radius">Tweet Radius 5&#8211;700 Km</string>
+
+
+    <string name="allow_gps_permission">Allow GPS permissions</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="all_tweets">All Tweets</string>
+    <string name="tweets_on_maps">Tweets on maps</string>
+    <string name="search">Search</string>
+</resources>

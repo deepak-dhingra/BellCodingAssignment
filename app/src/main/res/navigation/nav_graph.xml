@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/tweetMapFragment">
+
+    <fragment
+        android:id="@+id/tweetMapFragment"
+        android:name="com.challenge.tweetsviewerapp.ui.fragments.TweetMapFragment"
+        android:label="TweetMapFragment" >
+        <action
+            android:id="@+id/action_tweetMapFragment_to_tweetsFragment"
+            app:destination="@id/tweetsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tweetsFragment"
+        android:name="com.challenge.tweetsviewerapp.ui.fragments.TweetsFragment"
+        android:label="TweetsFragment" >
+    </fragment>
+
+</navigation>
