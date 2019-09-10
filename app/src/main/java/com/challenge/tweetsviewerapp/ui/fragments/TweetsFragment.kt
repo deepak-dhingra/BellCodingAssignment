@@ -105,6 +105,17 @@ class TweetsFragment : BaseFragment<FragmentTweetsBinding, MainViewModel>(), IIt
             tweetList.addAll(it)
             adapter.notifyDataSetChanged()
         })
+
+        mainViewModel?.tweet?.observe(this, Observer {
+            for (item in tweetList) {
+                if (item.id.equals(it.id)) {
+                    tweetList.remove(item)
+                    break
+                }
+            }
+            tweetList.add(it)
+            adapter.notifyDataSetChanged()
+        })
     }
 
     @SuppressLint("MissingPermission")
